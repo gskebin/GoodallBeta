@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "570723534870",
+    "firebase_url": "https://goodall-53e3f.firebaseio.com",
+    "project_id": "goodall-53e3f",
+    "storage_bucket": "goodall-53e3f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:570723534870:android:75c657102b5fdc6c",
+        "android_client_info": {
+          "package_name": "kr.co.dunet.app.goodallbeta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "570723534870-k436qpg8afj3ktvme3ol9rdt1699lvme.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kr.co.dunet.app.goodallbeta",
+            "certificate_hash": "45422432126655a08e2cd63a0e7c506e0c0a0ab7"
+          }
+        },
+        {
+          "client_id": "570723534870-ia0rdp027kl2dj6ddrq1u3kg1bsdpl9b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3VfG5cdSwoNppysanAdSbz3XcalBl6ec"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "570723534870-ia0rdp027kl2dj6ddrq1u3kg1bsdpl9b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

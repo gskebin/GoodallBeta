@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="kr.co.dunet.app.goodallbeta">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".ChatApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!--<meta-data-->
+        <!--android:name="com.facebook.sdk.ApplicationId"-->
+        <!--android:value="@string/faceAppId" />-->
+
+        <activity
+            android:name=".MainAct"
+            android:label="ㅇㅇㅇ"
+            android:theme="@style/AppTheme" />
+        <!-- [naveroauthlogin][start] 네이버아이디로로그인을 사용하기 위해서 넣어줘야하는 부분 -->
+        <activity android:name="com.nhn.android.naverlogin.ui.OAuthLoginActivity" />
+        <activity
+            android:name="com.nhn.android.naverlogin.ui.OAuthLoginInAppBrowserActivity"
+            android:label="OAuth2.0 In-app" />
+        <activity android:name=".ListAct">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainAct" />
+        </activity>
+        <activity android:name=".GuestAct">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainAct" />
+        </activity>
+        <activity android:name=".LoginAct">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainAct" />
+        </activity>
+        <activity android:name=".JoinAct" />
+
+        <!-- <activity android:name="com.facebook.FacebookActivity" -->
+        <!-- android:configChanges= -->
+        <!-- "keyboard|keyboardHidden|screenLayout|screenSize|orientation" -->
+        <!-- android:theme="@android:style/Theme.Translucent.NoTitleBar" -->
+        <!-- android:label="@string/app_name" -->
+        <!-- tools:replace="android:/theme"/> -->
+        <activity android:name=".IntroAct">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SignInAct" />
+        <activity android:name=".GoogleAct" />
+        <activity android:name=".passwordModifyAct" />
+        <activity android:name=".RoomCreateAct" />
+        <activity android:name=".testAct" />
+        <activity
+            android:name=".ChatRoomAct"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ListAct" />
+        </activity>
+    </application>
+
+</manifest>
