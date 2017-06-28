@@ -5,6 +5,7 @@ import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -39,6 +40,7 @@ public class ChatRoomAct extends AppCompatActivity {
         inflater.inflate(R.menu.chat_room_menu , menu);
         MenuItem item = menu.findItem(R.id.chat_room_search);
         SearchView searchView = (SearchView) MenuItemCompat.getActionView(item);
+        Log.d("테스트" , "테스트요");
 
         //검색바 기능
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
