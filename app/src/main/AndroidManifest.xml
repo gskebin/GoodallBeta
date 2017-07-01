@@ -17,9 +17,10 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <!--<meta-data-->
-        <!--android:name="com.facebook.sdk.ApplicationId"-->
-        <!--android:value="@string/faceAppId" />-->
+
+        <!-- <meta-data -->
+        <!-- android:name="com.facebook.sdk.ApplicationId" -->
+        <!-- android:value="@string/faceAppId" /> -->
 
         <activity
             android:name=".MainAct"
@@ -34,6 +35,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
+
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainAct" />
@@ -72,13 +74,18 @@
             android:name=".ChatRoomAct"
             android:theme="@style/AppTheme">
             <intent-filter>
-                <action android:name="android.intent.action.SEARCH"/>
+                <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
 
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ListAct" />
         </activity>
+
+        <service
+            android:name=".MqttService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>
