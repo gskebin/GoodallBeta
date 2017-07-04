@@ -40,14 +40,14 @@ public class DBManager extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        db.execSQL("CREATE TABLE IF NOT EXISTS " + USER_TABLE
-                + "( _id INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + " id TEXT, lastdate TEXT, " + " nickname TEXT );");
+            db.execSQL("CREATE TABLE IF NOT EXISTS " + USER_TABLE
+                    + "( _id INTEGER PRIMARY KEY AUTOINCREMENT, "
+                    + " id TEXT, lastdate TEXT, " + " nickname TEXT );");
 
-        db.execSQL("CREATE TABLE IF NOT EXISTS " + MEMBER_TABLE
-                + "( id TEXT, nickname TEXT, type INTERGER );");
+            db.execSQL("CREATE TABLE IF NOT EXISTS " + MEMBER_TABLE
+                    + "( id TEXT, nickname TEXT, type INTERGER );");
 
-        db.execSQL("CREATE TABLE IF NOT EXISTS " + CHAT_TABLE
+            db.execSQL("CREATE TABLE IF NOT EXISTS " + CHAT_TABLE
                 + "( _id INTEGER PRIMARY KEY AUTOINCREMENT, " + " rid TEXT, "
                 + " id TEXT, " + " room_code TEXT, " + " nickname TEXT, "
                 + " like INTEGER, " + " message TEXT, " + " reg_date TEXT, "

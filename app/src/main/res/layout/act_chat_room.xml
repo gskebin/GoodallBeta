@@ -9,9 +9,49 @@
 
 
     <ListView
+        android:id="@+id/chat_list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1.67"
+        android:dividerHeight="5dp"
+        android:divider="@null"
+        android:transcriptMode="alwaysScroll"
+        android:stackFromBottom="false"
         />
 
+    <ScrollView
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <EditText
+            android:id="@+id/txt_send"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="입력해줭"
+            android:background="#fff"
+            android:maxLines="4"
+            android:textColor="#000"
+            android:padding="10dp"
+            android:scrollHorizontally="true"
+            android:layout_gravity="center_vertical"/>
+
+        <Button
+            android:onClick="BtnClick"
+            android:id="@+id/btn_send"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="전송"
+            android:background="@color/colorPrimaryDark"/>
+
+    </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

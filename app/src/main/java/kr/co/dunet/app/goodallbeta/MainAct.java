@@ -59,7 +59,7 @@ public class MainAct extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         ChatApplication app = (ChatApplication) getApplicationContext();
-        Log.d("main " , app.getUserId());
+//        Log.d("main " , app.getUserId());
 
         super.onCreate(savedInstanceState);
         try {
