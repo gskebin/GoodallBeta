@@ -31,9 +31,13 @@ public class ChatRoomAct extends AppCompatActivity {
     private SendHttp mSendHttp;
     private boolean isConnect = false;
     public MqttService mqttService;
+
+    //서비스쪽에서 onBind 의 return 으로 IBinder 인스턴스를 받는데 해당인터페이스로
+    //클라이언트와 서비스가 통신함.
     public ServiceConnection connection = new ServiceConnection() {
 
-
+        //서비스와 바인딩 된후
+        //Binder 객체에 공개메서드를 만들어 Service 인스턴스를 가져옴.
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
             mqttService = ((MqttService.MqttBinder) service).getService();
@@ -42,6 +46,7 @@ public class ChatRoomAct extends AppCompatActivity {
 
         @Override
         public void onServiceDisconnected(ComponentName name) {
+            mqttService = null;
             isConnect = false;
         }
     };

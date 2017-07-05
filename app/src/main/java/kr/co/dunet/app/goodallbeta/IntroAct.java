@@ -13,6 +13,7 @@ public class IntroAct extends AppCompatActivity {
 
     private Handler handler;
     private Context mcontext;
+    private static final String TAG = "IntroAct";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +30,14 @@ public class IntroAct extends AppCompatActivity {
                 ChatApplication app = (ChatApplication) getApplicationContext();
                 String id = app.getUserId() == null? "" : app.getUserId();
                 Log.d("Intro 시작 합니다" , id);
+                String roomCode = getIntent().getStringExtra("ROOMCODE");
 
                 if(id.equals("")){
+
+                    //서비스 시작
+                    Log.d(TAG , "서비스를 시작합니다");
+                    startService(new Intent(mcontext, MqttService.class));
+
                     DBManager mDbManager = DBManager.getInstance(mcontext);
                     String[] columns = new String[]{"id", "nickname", "type"};
                     Cursor c = mDbManager.selectMember(columns , null, null, null, null, null);

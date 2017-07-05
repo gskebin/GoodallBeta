@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.app.Application;
 import android.os.Bundle;
 
+import org.eclipse.paho.client.mqttv3.IMqttAsyncClient;
+
 /**
  * Created by hanbit on 2017-06-07.
  */
@@ -17,6 +19,8 @@ public class ChatApplication extends Application implements Application.Activity
     private String chatRoom = null;
     private static ChatApplication myApp;
     private boolean isAppfinishState = false;
+    private Boolean appFirst = false;
+    private volatile IMqttAsyncClient mqttClient;
 
 
     public boolean isGuest() {
@@ -114,5 +118,21 @@ public class ChatApplication extends Application implements Application.Activity
     @Override
     public void onActivityDestroyed(Activity activity) {
 
+    }
+
+    public Boolean getAppFirst() {
+        return appFirst;
+    }
+
+    public void setAppFirst(Boolean appFirst) {
+        this.appFirst = appFirst;
+    }
+
+    public IMqttAsyncClient getMqttClient() {
+        return mqttClient;
+    }
+
+    public void setMqttClient(IMqttAsyncClient mqttClient) {
+        this.mqttClient = mqttClient;
     }
 }
